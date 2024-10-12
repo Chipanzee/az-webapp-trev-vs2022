@@ -25,13 +25,13 @@ jobs:
         run: dotnet build --configuration Release
 
       - name: dotnet publish
-        run: dotnet publish -c Release -o "C:\Users\adamo\source\repos\azure-app-trev-vs\publish"
+        run: dotnet publish -c Release -o "C:/Users/adamo/source/repos/azure-app-trev-vs/publish"
 
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v4
         with:
           name: .net-app
-          path: "C:\Users\adamo\source\repos\azure-app-trev-vs\publish"
+          path: "C:/Users/adamo/source/repos/azure-app-trev-vs/publish"
 
   deploy:
     runs-on: windows-latest
